@@ -1,0 +1,7 @@
+{
+  "name": "sophie",
+  "private": true,
+  "dependencies": {
+    "normalize.css": "^8.0.0"
+  }
+}
