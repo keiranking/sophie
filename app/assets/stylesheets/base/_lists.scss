@@ -17,3 +17,28 @@ dt {
 dd {
   margin: 0;
 }
+
+details {
+// summary::after {
+//   color: #ccc;
+//   content: "►";
+//   font-size: 0.75rem;
+//   padding-left: 0.5rem;
+// }
+//
+// &[open] > summary::after {
+//   content: "▼";
+// }
+}
+
+summary {
+  list-style-type: none; // Firefox, Edge
+
+  &::-webkit-details-marker {
+    display: none; // Blink, Webkit
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

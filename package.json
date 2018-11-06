@@ -2,6 +2,7 @@
   "name": "sophie",
   "private": true,
   "dependencies": {
+    "details-element-polyfill": "^2.0.3",
     "normalize.css": "^8.0.0"
   }
 }

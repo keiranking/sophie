@@ -17,3 +17,8 @@ en:
 
   titles:
     application: Sophie
+
+  welcome:
+    index:
+      title: Untitled
+      author: Anonymous
