@@ -1,0 +1,20 @@
+.caret {
+}
+
+.caret--after {
+  &::after {
+    color: #ccc;
+    content: "\25BC";
+    font-size: 0.8rem;
+    padding-left: 0.25rem;
+  }
+}
+
+.caret--before {
+  &::before {
+    color: #ccc;
+    content: "\25BC";
+    font-size: 0.8rem;
+    padding-right: 0.25rem;
+  }
+}
