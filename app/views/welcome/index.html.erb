@@ -1,2 +1,107 @@
-<h1>Welcome#index</h1>
-<p>Find me in <em>app/views/welcome/index.html.erb</em></p>
+<small>Welcome#index (app/views/welcome/index.html.erb)</small>
+
+<section id="puzzle_profile" class="u-margin__bottom">
+  <details>
+    <summary>
+      <h2>
+        Title
+      </h2>
+
+      <h2>
+        Author
+      </h2>
+    </summary>
+
+    <section id="stats">
+      <dl>
+          <dt>Black squares</dt>
+          <dd>40</dd>
+
+          <dt>Avg word length</dt>
+          <dd>4.8</dd>
+
+          <dt>Missing letters</dt>
+          <dd>F J Q X Z</dd>
+      </dl>
+    </section>
+  </details>
+</section>
+
+<menu type="toolbar">
+  <li>
+    New
+  </li>
+
+  <li>
+    Open
+  </li>
+
+  <li>
+    Save
+  </li>
+</menu>
+
+<section id="puzzle" class="u-margin__bottom">
+  <%- @puzzle_fill = "GREW.ANAIS.LABSLARA.NOSCH.EBONANIL.ESTEE.ADUERACKETEERS.DOLEETHOS.......MER...FAM.RAP.LIV.CHEF.IRENE.ONANCOLA.LOSTS.SARSSLAM.ATEST.ALDA.LIE.NEA.OWN...AYN.......AGATETWEE.VAMPIREBATTOMA.EDUCT.LASHHOAR.RESTS.ETTAEDYS.ANDSO.SEEN" %>
+  <% @puzzle_fill.each_char do |letter| %>
+    <div>
+      <div>
+        38.
+      </div>
+
+      <div>
+        <%= letter %>
+      </div>
+    </div>
+  <% end %>
+</section>
+
+<section id="edit-entries" class="u-margin__bottom">
+  <div>
+    <div>
+      <div>
+        38.
+      </div>
+
+      <div>
+        How some ham and cheese is sliced
+      </div>
+
+      <div>
+        TH----
+      </div>
+    </div>
+
+    <%- @suggestions = ["thanks", "thanos", "thirst", "thorns", "throng", "thrust", "thumbs"] %>
+    <ul>
+      <% @suggestions.each do |suggestion| %>
+        <li>
+          <%= suggestion %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</section>
+
+<section id="edit-clues" class="u-margin__bottom">
+  <%- @clues = [
+    "Waxed",
+    "First name in erotica",
+    "They might be chocolate",
+    "Flynn Boyle of 'Twin Peaks'",
+    "Request at a laundry",
+    "How some ham and cheese is sliced",
+    "Like some keys",
+    "Dye plant",
+    "Popular women's fragrance",
+    "Together, in music",
+  ] %>
+
+  <ul>
+    <% @clues.each do |clue| %>
+      <li>
+        <%= clue %>
+      </li>
+    <% end %>
+  </ul>
+</section>
