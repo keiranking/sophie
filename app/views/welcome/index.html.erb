@@ -1,5 +1,21 @@
 <small>Welcome#index (app/views/welcome/index.html.erb)</small>
 
+<menu type="toolbar">
+  <li>
+    New
+  </li>
+
+  <li>
+    Open
+  </li>
+
+  <li>
+    Save
+  </li>
+</menu>
+
+<hr />
+
 <section id="puzzle_profile" class="u-margin__bottom">
   <details>
     <summary>
@@ -27,29 +43,20 @@
   </details>
 </section>
 
-<menu type="toolbar">
-  <li>
-    New
-  </li>
-
-  <li>
-    Open
-  </li>
-
-  <li>
-    Save
-  </li>
-</menu>
-
-<section id="puzzle" class="u-margin__bottom">
-  <%- @puzzle_fill = "GREW.ANAIS.LABSLARA.NOSCH.EBONANIL.ESTEE.ADUERACKETEERS.DOLEETHOS.......MER...FAM.RAP.LIV.CHEF.IRENE.ONANCOLA.LOSTS.SARSSLAM.ATEST.ALDA.LIE.NEA.OWN...AYN.......AGATETWEE.VAMPIREBATTOMA.EDUCT.LASHHOAR.RESTS.ETTAEDYS.ANDSO.SEEN" %>
+<section
+  class="puzzle-grid u-margin__bottom"
+  style="--rows: 15; --columns: 15;"
+>
+  <%- @puzzle_fill = "MAMBA.JAMS.ALBAIBSEN.ODIE.BOORCONANTHEXX.ZOOM...KEANU..SUSHILBJ.XXXXXPIGEONIRULE...BRA.COGLIKESO.ROOMBA..TEEN.PTXXX.ANNE..BASTES.YAWNEDEEO.PIN...CLOWNXXXSANDWICH.NSAHOHUM..INUIT...UTES.BATTLESHIPMIRA.ANTE.VOICEECON.TTYL.ESTER" %>
   <% @puzzle_fill.each_char do |letter| %>
-    <div>
-      <div>
-        38.
-      </div>
+    <div class="square <%= "square--black" if letter == "." %>">
+      <% if letter == "E" %>
+        <div class="square__number">
+          38
+        </div>
+      <% end %>
 
-      <div>
+      <div class="square__letter">
         <%= letter %>
       </div>
     </div>

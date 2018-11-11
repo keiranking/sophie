@@ -1,0 +1,23 @@
+.square {
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.square--black {
+  background-color: transparent;
+}
+
+.square__number {
+  font-size: $small-font-size;
+  font-weight: 500;
+  left: 1px;
+  position: absolute;
+  top: -2px;
+}
+
+.square__letter {
+
+}
