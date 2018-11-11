@@ -1,0 +1,14 @@
+.menu {
+  border-bottom: $base-border;
+  display: flex;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+
+  li {
+    padding: $xsmall-spacing $small-spacing;
+  }
+}

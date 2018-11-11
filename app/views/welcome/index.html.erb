@@ -1,6 +1,4 @@
-<small>Welcome#index (app/views/welcome/index.html.erb)</small>
-
-<menu type="toolbar">
+<menu type="toolbar" class="menu">
   <li>
     New
   </li>
@@ -14,114 +12,122 @@
   </li>
 </menu>
 
-<hr />
+<div class="container u-margin__top--large">
+  <header class="puzzle-header">
+    <h2>
+      Title
+    </h2>
 
-<header>
-  <h2>
-    Title
-  </h2>
+    by
 
-  <h2>
-    Author
-  </h2>
-</header>
+    <h2>
+      Author
+    </h2>
+  </header>
 
-<section class="puzzle">
-  <div
-    class="puzzle-grid"
-    style="--rows: 15; --columns: 15;"
-  >
-    <%- @puzzle_fill = "MAMBA.JAMS.ALBAIBSEN.ODIE.BOORCONANTHEXX.ZOOM...KEANU..SUSHILBJ.XXXXXPIGEONIRULE...BRA.COGLIKESO.ROOMBA..TEEN.PTXXX.ANNE..BASTES.YAWNEDEEO.PIN...CLOWNXXXSANDWICH.NSAHOHUM..INUIT...UTES.BATTLESHIPMIRA.ANTE.VOICEECON.TTYL.ESTER" %>
-    <% @puzzle_fill.each_char do |letter| %>
-      <div class="square <%= "square--black" if letter == "." %>">
-        <% if letter == "E" %>
-          <div class="square__number">
-            38
+  <section class="puzzle">
+    <div
+      class="puzzle-grid"
+      style="--rows: 15; --columns: 15;"
+    >
+      <%- @puzzle_fill = "MAMBA.JAMS.ALBAIBSEN.ODIE.BOORCONANTHEXX.ZOOM...KEANU..SUSHILBJ.XXXXXPIGEONIRULE...BRA.COGLIKESO.ROOMBA..TEEN.PTXXX.ANNE..BASTES.YAWNEDEEO.PIN...CLOWNXXXSANDWICH.NSAHOHUM..INUIT...UTES.BATTLESHIPMIRA.ANTE.VOICEECON.TTYL.ESTER" %>
+      <% @puzzle_fill.each_char do |letter| %>
+        <div class="square <%= "square--black" if letter == "." %>">
+          <% if letter == "E" %>
+            <div class="square__number">
+              38
+            </div>
+          <% end %>
+
+          <div class="square__letter">
+            <%= letter %>
           </div>
-        <% end %>
-
-        <div class="square__letter">
-          <%= letter %>
         </div>
-      </div>
-    <% end %>
-  </div>
-
-  <details class="stats">
-    <summary class="stats__summary">
-      40 black squares, 78 entries
-    </summary>
-
-    <div class="stats__expanded">
-      <dl>
-        <dt class="stats__label">Black squares</dt>
-        <dd class="stats__stat">40</dd>
-      </dl>
-
-      <dl>
-        <dt class="stats__label">Entries</dt>
-        <dd class="stats__stat">78</dd>
-      </dl>
-
-      <dl>
-        <dt class="stats__label">Avg entry length</dt>
-        <dd class="stats__stat">4.8</dd>
-      </dl>
-
-      <dl>
-        <dt class="stats__label">Missing letters</dt>
-        <dd class="stats__stat">F J Q X Z</dd>
-      </dl>
+      <% end %>
     </div>
-  </details>
-</section>
 
-<section id="edit-entries" class="u-margin__bottom">
-  <div>
+    <details class="stats">
+      <summary class="stats__summary">
+        40 black squares, 78 entries
+      </summary>
+
+      <div class="stats__expanded">
+        <dl>
+          <dt class="stats__label">Black squares</dt>
+          <dd class="stats__stat">40</dd>
+        </dl>
+
+        <dl>
+          <dt class="stats__label">Entries</dt>
+          <dd class="stats__stat">78</dd>
+        </dl>
+
+        <dl>
+          <dt class="stats__label">Avg entry length</dt>
+          <dd class="stats__stat">4.8</dd>
+        </dl>
+
+        <dl>
+          <dt class="stats__label">Missing letters</dt>
+          <dd class="stats__stat">F J Q X Z</dd>
+        </dl>
+      </div>
+    </details>
+  </section>
+
+  <section id="edit-entries" class="u-margin__bottom">
     <div>
       <div>
-        38.
+        <div>
+          38.
+        </div>
+
+        <div>
+          How some ham and cheese is sliced
+        </div>
+
+        <div>
+          TH----
+        </div>
       </div>
 
-      <div>
-        How some ham and cheese is sliced
-      </div>
-
-      <div>
-        TH----
-      </div>
+      <%- @suggestions = ["thanks", "thanos", "thirst", "thorns", "throng", "thrust", "thumbs"] %>
+      <ul>
+        <% @suggestions.each do |suggestion| %>
+          <li>
+            <%= suggestion %>
+          </li>
+        <% end %>
+      </ul>
     </div>
+  </section>
 
-    <%- @suggestions = ["thanks", "thanos", "thirst", "thorns", "throng", "thrust", "thumbs"] %>
+  <section id="edit-clues" class="u-margin__bottom">
+    <%- @clues = [
+      "Waxed",
+      "First name in erotica",
+      "They might be chocolate",
+      "Flynn Boyle of 'Twin Peaks'",
+      "Request at a laundry",
+      "How some ham and cheese is sliced",
+      "Like some keys",
+      "Dye plant",
+      "Popular women's fragrance",
+      "Together, in music",
+    ] %>
+
     <ul>
-      <% @suggestions.each do |suggestion| %>
+      <% @clues.each do |clue| %>
         <li>
-          <%= suggestion %>
+          <%= clue %>
         </li>
       <% end %>
     </ul>
-  </div>
-</section>
+  </section>
 
-<section id="edit-clues" class="u-margin__bottom">
-  <%- @clues = [
-    "Waxed",
-    "First name in erotica",
-    "They might be chocolate",
-    "Flynn Boyle of 'Twin Peaks'",
-    "Request at a laundry",
-    "How some ham and cheese is sliced",
-    "Like some keys",
-    "Dye plant",
-    "Popular women's fragrance",
-    "Together, in music",
-  ] %>
-
-  <ul>
-    <% @clues.each do |clue| %>
-      <li>
-        <%= clue %>
-      </li>
-    <% end %>
-  </ul>
-</section>
+  <footer>
+    <small>
+      Welcome#index (app/views/welcome/index.html.erb)
+    </small>
+  </footer>
+</div>

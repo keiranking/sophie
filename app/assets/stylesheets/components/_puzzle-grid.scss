@@ -1,8 +1,12 @@
 .puzzle-grid {
-  background-color: $black;
+  background-color: $puzzle-background-color;
   display: inline-grid;
   grid-gap: 1px;
   grid-template-columns: repeat(var(--columns), $square-size);
   grid-template-rows: repeat(var(--rows), $square-size);
   padding: $xxsmall-spacing;
+}
+
+.puzzle-grid--unfillable {
+  background-color: $error-color;
 }

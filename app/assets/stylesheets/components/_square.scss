@@ -10,6 +10,14 @@
   background-color: transparent;
 }
 
+.square--highlight {
+  background-color: $highlight-color;
+
+  & > .square__letter {
+    font-weight: 500;
+  }
+}
+
 .square__number {
   font-size: $small-font-size;
   font-weight: 500;
