@@ -8,10 +8,14 @@ $heading-line-height: 1.2;
 
 // Other Sizes
 $base-border-radius: 3px;
+
 $base-spacing: 1.5rem;
+$large-spacing: $base-spacing * 2;
+$xlarge-spacing: $large-spacing * 2;
 $small-spacing: $base-spacing / 2;
 $xsmall-spacing: $small-spacing / 2;
 $xxsmall-spacing: $xsmall-spacing / 2;
+
 $square-size: 2rem;
 
 $large-font-size: 1.2rem;

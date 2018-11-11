@@ -16,35 +16,18 @@
 
 <hr />
 
-<section id="puzzle_profile" class="u-margin__bottom">
-  <details>
-    <summary>
-      <h2>
-        Title
-      </h2>
+<header>
+  <h2>
+    Title
+  </h2>
 
-      <h2>
-        Author
-      </h2>
-    </summary>
-
-    <section id="stats">
-      <dl>
-          <dt>Black squares</dt>
-          <dd>40</dd>
-
-          <dt>Avg word length</dt>
-          <dd>4.8</dd>
-
-          <dt>Missing letters</dt>
-          <dd>F J Q X Z</dd>
-      </dl>
-    </section>
-  </details>
-</section>
+  <h2>
+    Author
+  </h2>
+</header>
 
 <section
-  class="puzzle-grid u-margin__bottom"
+  class="puzzle-grid"
   style="--rows: 15; --columns: 15;"
 >
   <%- @puzzle_fill = "MAMBA.JAMS.ALBAIBSEN.ODIE.BOORCONANTHEXX.ZOOM...KEANU..SUSHILBJ.XXXXXPIGEONIRULE...BRA.COGLIKESO.ROOMBA..TEEN.PTXXX.ANNE..BASTES.YAWNEDEEO.PIN...CLOWNXXXSANDWICH.NSAHOHUM..INUIT...UTES.BATTLESHIPMIRA.ANTE.VOICEECON.TTYL.ESTER" %>
@@ -61,6 +44,27 @@
       </div>
     </div>
   <% end %>
+</section>
+
+<section class="stats">
+  <details>
+    <summary>
+      40 black squares, missing F J Q X Z
+    </summary>
+
+    <div>
+      <dl>
+          <dt>Black squares</dt>
+          <dd>40</dd>
+
+          <dt>Avg word length</dt>
+          <dd>4.8</dd>
+
+          <dt>Missing letters</dt>
+          <dd>F J Q X Z</dd>
+      </dl>
+    </div>
+  </details>
 </section>
 
 <section id="edit-entries" class="u-margin__bottom">
