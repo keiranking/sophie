@@ -26,42 +26,51 @@
   </h2>
 </header>
 
-<section
-  class="puzzle-grid"
-  style="--rows: 15; --columns: 15;"
->
-  <%- @puzzle_fill = "MAMBA.JAMS.ALBAIBSEN.ODIE.BOORCONANTHEXX.ZOOM...KEANU..SUSHILBJ.XXXXXPIGEONIRULE...BRA.COGLIKESO.ROOMBA..TEEN.PTXXX.ANNE..BASTES.YAWNEDEEO.PIN...CLOWNXXXSANDWICH.NSAHOHUM..INUIT...UTES.BATTLESHIPMIRA.ANTE.VOICEECON.TTYL.ESTER" %>
-  <% @puzzle_fill.each_char do |letter| %>
-    <div class="square <%= "square--black" if letter == "." %>">
-      <% if letter == "E" %>
-        <div class="square__number">
-          38
+<section class="puzzle">
+  <div
+    class="puzzle-grid"
+    style="--rows: 15; --columns: 15;"
+  >
+    <%- @puzzle_fill = "MAMBA.JAMS.ALBAIBSEN.ODIE.BOORCONANTHEXX.ZOOM...KEANU..SUSHILBJ.XXXXXPIGEONIRULE...BRA.COGLIKESO.ROOMBA..TEEN.PTXXX.ANNE..BASTES.YAWNEDEEO.PIN...CLOWNXXXSANDWICH.NSAHOHUM..INUIT...UTES.BATTLESHIPMIRA.ANTE.VOICEECON.TTYL.ESTER" %>
+    <% @puzzle_fill.each_char do |letter| %>
+      <div class="square <%= "square--black" if letter == "." %>">
+        <% if letter == "E" %>
+          <div class="square__number">
+            38
+          </div>
+        <% end %>
+
+        <div class="square__letter">
+          <%= letter %>
         </div>
-      <% end %>
-
-      <div class="square__letter">
-        <%= letter %>
       </div>
-    </div>
-  <% end %>
-</section>
+    <% end %>
+  </div>
 
-<section class="stats">
-  <details>
-    <summary>
-      40 black squares, missing F J Q X Z
+  <details class="stats">
+    <summary class="stats__summary">
+      40 black squares, 78 entries
     </summary>
 
-    <div>
+    <div class="stats__expanded">
       <dl>
-          <dt>Black squares</dt>
-          <dd>40</dd>
+        <dt class="stats__label">Black squares</dt>
+        <dd class="stats__stat">40</dd>
+      </dl>
 
-          <dt>Avg word length</dt>
-          <dd>4.8</dd>
+      <dl>
+        <dt class="stats__label">Entries</dt>
+        <dd class="stats__stat">78</dd>
+      </dl>
 
-          <dt>Missing letters</dt>
-          <dd>F J Q X Z</dd>
+      <dl>
+        <dt class="stats__label">Avg entry length</dt>
+        <dd class="stats__stat">4.8</dd>
+      </dl>
+
+      <dl>
+        <dt class="stats__label">Missing letters</dt>
+        <dd class="stats__stat">F J Q X Z</dd>
       </dl>
     </div>
   </details>
