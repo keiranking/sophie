@@ -8,7 +8,7 @@
   position: absolute;
   top: 0;
 
-  li {
+  & > li {
     padding: $xsmall-spacing $small-spacing;
   }
 }
