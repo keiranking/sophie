@@ -1,0 +1,19 @@
+<%= form_for(@puzzle, method: :put) do |f| %>
+  <%= f.label :title, "Title" %>
+
+  <%= f.text_field :title %>
+
+  <%= f.label :author, "Author" %>
+
+  <%= f.text_field :author %>
+
+  <%= f.label :rows, "Rows" %>
+
+  <%= f.text_field :rows %>
+
+  <%= f.label :cols, "Columns" %>
+
+  <%= f.text_field :cols %>
+
+  <%= f.submit "Save" %>
+<% end %>

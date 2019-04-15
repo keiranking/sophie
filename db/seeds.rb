@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Puzzle.create!(title: "Alpha Bets")
+Puzzle.create!(title: "Babel Towers")
+Puzzle.create!(title: "Crossed Signals")
+Puzzle.create!(title: "Dirty Words")
