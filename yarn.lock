@@ -2,6 +2,12 @@
 # yarn lockfile v1
 
 
-normalize.css@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-8.0.0.tgz#14ac5e461612538a4ce9be90a7da23f86e718493"
+details-element-polyfill@^2.0.3:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/details-element-polyfill/-/details-element-polyfill-2.3.1.tgz#6af31acd454d9e3906961c35b4f1e229281c4b62"
+  integrity sha512-7Gr2pBgSpeSvBGBWjMESJ7WClexq3A5/HlZ2ZVgG4OjNvTgRfCEe0+ZEfT44JymqCtHd04+pSrgYg4W6yok/6w==
+
+normalize.css@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-8.0.1.tgz#9b98a208738b9cc2634caacbc42d131c97487bf3"
+  integrity sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==
