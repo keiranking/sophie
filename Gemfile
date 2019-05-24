@@ -20,7 +20,7 @@ gem "sass-rails"
 gem "skylight"
 gem "sprockets", ">= 3.0.0"
 gem "title"
-gem "uglifier"
+gem "turbolinks", "~> 5.2.0"
 gem "bootsnap", require: false
 gem "webpacker", require: false
 

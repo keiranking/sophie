@@ -13,6 +13,7 @@
 //= require rails-ujs
 //= require activestorage
 //= require_tree .
+//= require turbolinks
 
 import { Application } from "stimulus";
 import { definitionsFromContext } from "stimulus/webpack-helpers";
