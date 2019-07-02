@@ -1,0 +1,14 @@
+<h1>
+  Puzzles
+</h1>
+
+<% @puzzles.each do |puzzle| %>
+  <p>
+    <%= link_to(
+      puzzle.title,
+      edit_puzzle_path(puzzle),
+    ) %>
+  </p>
+<% end %>
+
+<%= link_to("Add puzzle", new_puzzle_path) %>
